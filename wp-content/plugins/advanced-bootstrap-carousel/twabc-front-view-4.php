@@ -30,7 +30,7 @@ wp_enqueue_style( 'twabc', plugins_url('asset/css/twabc-advanced-4.css',__FILE__
 					// Caption
 						echo '<img src="'.$image['img_src'].'" alt="'.$image['title'].'" />';
 						if(strlen($image['content']) > 0){
-							echo '<div class="carousel-caption d-none d-md-block">';
+							echo '<div class="carousel-caption animated fadeInDown">';
 							echo $image['content'];
 							echo '</div>';
 						}	

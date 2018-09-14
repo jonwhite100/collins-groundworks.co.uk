@@ -30,7 +30,13 @@ function add_child_theme_textdomain() {
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
 /**
-* Make Header Shrink on Page Scroll
+*   BPM add animate.css
+**/
+// Load animation css
+wp_enqueue_style( 'animate-css', get_stylesheet_directory_uri() . '/animate.min.css' );
+
+/**
+* BPMMake Header Shrink on Page Scroll
 **/
 
 add_action ('wp_footer','vr_shrink_head',1);
