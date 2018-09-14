@@ -1,0 +1,42 @@
+// home page only
+// .home {
+//   .entry-header {
+//     display: none;
+//   }
+//
+//   .wrapper {
+//     padding-top: 0;
+//   }
+// }
+//
+// .m__large {
+//   margin-top: 40px;
+//   margin-bottom: 40px;
+// }
+
+
+// Navbar shrinking
+.navbar {
+    padding: 1rem;
+    background-color: $c_navbar_bg;
+    border-bottom: 1px solid $c_navbar_border;
+
+    // Shrink the header
+	&.shrink {
+		top: 0!important;
+		height:50px!important;
+		padding: 0.5rem 1rem!important;
+		background-color: rgba(250, 250, 250, 1)!important;
+		transition: all 0.25s ease-in-out;
+
+		.mob-standard-logo {
+		  height: 25px !important;
+		  transition: all 0.25s ease-in-out;
+		}
+	}
+}
+
+// Leave space at the top of the page for the fixed navbar
+#page-wrapper {
+    margin-top: $s_xl;
+}

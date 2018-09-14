@@ -5,9 +5,22 @@
 // Thats the ugly Bootstrap blue used for all the links, primary buttons etc.
 // Just add your color code here, compile the theme.scss file to change this color everywhere
 
-
 //
 // Color system
 //
+$black: #000;
+$white: #fff;
 
 $primary: pink;
+
+$c_navbar_bg: $white;
+$c_navbar_border: lighten($black, 90%);
+
+// Spacers
+$unit: 1.5rem;
+
+$s_m: $unit;
+$s_sm: $s_m * 0.75;
+$s_xs: $s_sm * 0.75;
+$s_l: $s_m * 1.5;
+$s_xl: $s_l * 1.5;

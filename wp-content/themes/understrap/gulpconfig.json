@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "localhost/collins-groundworks.co.uk",
+    "proxy": "localhost/",
     "notify": false
   },
   "browserSyncWatchFiles" : [

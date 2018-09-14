@@ -1,0 +1,55 @@
+
+// #wrapper-hero {
+//
+//
+//     .carousel {
+//         position: relative;
+//         width: 100%;
+//         height: 100%;
+//     }
+//
+//     .carousel-inner {
+//         position: absolute;
+//         width: 100%;
+//         height: 100%;
+//
+//     }
+//     .carousel-item {
+//         position: relative;
+//         overflow: hidden;
+//
+//         .image {
+//             width: 100%;
+//             height: auto;
+//         }
+//     }
+//
+//     @include media-breakpoint-up(xs) {
+//         background-color: red;
+//         height: 30rem;
+//     }
+//
+//     @include media-breakpoint-up(sm) {
+//         background-color: orange;
+//     }
+//
+//     @include media-breakpoint-up(md) {
+//         background-color: yellow;
+//         height: 35rem;
+//     }
+//
+//     @include media-breakpoint-up(lg) {
+//         background-color: green;
+//         height: 40rem;
+//     }
+//
+//     @include media-breakpoint-up(xl) {
+//         background-color: blue;
+//         height: 42rem;
+//
+//         .image {
+//             height: 42rem!important;
+//             max-height: 42rem!important;
+//         }
+//     }
+// }

@@ -28,3 +28,27 @@ function add_child_theme_textdomain() {
     load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
+
+/**
+* Make Header Shrink on Page Scroll
+**/
+
+add_action ('wp_footer','vr_shrink_head',1);
+
+function vr_shrink_head() {
+    ?>
+    <script>
+        jQuery(document).ready(function($) {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 100) {
+                    $('.navbar').addClass('shrink');
+                }
+
+                else{
+                    $('.navbar').removeClass('shrink');
+                }
+            });
+        });
+    </script>
+    <?php
+}

@@ -10794,3 +10794,22 @@ a.skip-link {
 
 .gallery-caption {
   display: block; }
+
+.navbar {
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6; }
+  .navbar.shrink {
+    top: 0 !important;
+    height: 50px !important;
+    padding: 0.5rem 1rem !important;
+    background-color: #fafafa !important;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out; }
+    .navbar.shrink .mob-standard-logo {
+      height: 25px !important;
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out; }
+
+#page-wrapper {
+  margin-top: 3.375rem; }
