@@ -1,0 +1,25 @@
+.entry-title {
+    // background-color: red;
+    text-align: center;
+    font-size: $h3-font-size;
+}
+
+/*
+** Footer widget (call to action)
+*/
+#footer-full-content {
+    text-align: center;
+
+    .btn-default {
+        border-radius: 0;
+        border-color: $black;
+        color: $black;
+    }
+}
+
+.footer-menu {
+    li {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+}

@@ -20,7 +20,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <?php if ( is_front_page() ) : ?>
-	<div id="carousel-wrapper"><?php echo do_shortcode('[twabc-carousel interval="9000"]')?></div>
+	<div id=""><?php echo do_shortcode('[metaslider id="26"]'); ?></div>
 <?php endif; ?>
 
 <div class="wrapper" id="page-wrapper">
