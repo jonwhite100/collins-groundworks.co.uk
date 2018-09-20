@@ -2,6 +2,25 @@
     // background-color: red;
     text-align: center;
     font-size: $h3-font-size;
+    margin-bottom: $s_xl;
+}
+
+/*
+** Home Page specific
+*/
+.home-intro {
+    text-align: center;
+    margin-bottom: $s_xl;
+}
+
+.home-display {
+    margin-bottom: $s_xl * 1.5;
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 /*
@@ -9,11 +28,10 @@
 */
 #footer-full-content {
     text-align: center;
+    padding: $s_sm 0;
 
-    .btn-default {
-        border-radius: 0;
-        border-color: $black;
-        color: $black;
+    h2 {
+        margin-bottom: $s_l;
     }
 }
 
@@ -21,5 +39,13 @@
     li {
         display: inline-block;
         margin-left: 1rem;
+    }
+}
+
+#wrapper-footer {
+    background-color: $black;
+
+    .site-info {
+        color: $white;
     }
 }

@@ -5,6 +5,7 @@
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Lato");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -32,7 +33,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Lato", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 *,
@@ -57,7 +58,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5563,7 +5564,7 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5648,7 +5649,7 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10847,18 +10848,49 @@ a.skip-link {
 
 .entry-title {
   text-align: center;
-  font-size: 1.75rem; }
+  font-size: 1.75rem;
+  margin-bottom: 3.375rem; }
+
+/*
+** Home Page specific
+*/
+.home-intro {
+  text-align: center;
+  margin-bottom: 3.375rem; }
+
+.home-display {
+  margin-bottom: 5.0625rem; }
+  .home-display-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
 
 /*
 ** Footer widget (call to action)
 */
 #footer-full-content {
-  text-align: center; }
-  #footer-full-content .btn-default {
-    border-radius: 0;
-    border-color: #000;
-    color: #000; }
+  text-align: center;
+  padding: 1.125rem 0; }
+  #footer-full-content h2 {
+    margin-bottom: 2.25rem; }
 
 .footer-menu li {
   display: inline-block;
   margin-left: 1rem; }
+
+#wrapper-footer {
+  background-color: #000; }
+  #wrapper-footer .site-info {
+    color: #fff; }
+
+.btn-default {
+  border-radius: 0;
+  border-color: #000;
+  color: #000; }

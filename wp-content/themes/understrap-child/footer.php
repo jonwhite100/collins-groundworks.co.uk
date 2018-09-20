@@ -13,7 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 <footer class="site-footer" id="colophon">
 	<div class="wrapper" id="wrapper-footer">
@@ -33,7 +32,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 </footer><!-- #colophon -->
 
 </div><!-- #page we need this extra closing tag here -->
-
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+<script>
+	ScrollReveal().reveal('.home-display', { delay: 500 });
+	ScrollReveal().reveal('.footer-widget', { delay: 500 });
+</script>
 <?php wp_footer(); ?>
 
 </body>
