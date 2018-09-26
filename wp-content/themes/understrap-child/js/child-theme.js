@@ -3976,3 +3976,5 @@
 		}, false );
 	}
 })();
+
+console.log( "ready!" );
