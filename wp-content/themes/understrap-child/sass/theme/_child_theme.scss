@@ -1,12 +1,8 @@
-@import "components/header";
+@import "components/buttons";
 @import "components/carousel";
+@import "components/footer";
+@import "components/header";
 @import "components/page";
-
-.btn-default {
-    border-radius: 0;
-    border-color: $black;
-    color: $black;
-}
 
 //*
 // Scroll reveal

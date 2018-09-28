@@ -33,7 +33,7 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 *   BPM add animate.css
 **/
 // Load animation css
-wp_enqueue_style( 'animate-css', get_stylesheet_directory_uri() . '/animate.min.css' );
+// wp_enqueue_style( 'animate-css', get_stylesheet_directory_uri() . '/animate.min.css' );
 
 /**
 * BPMMake Header Shrink on Page Scroll

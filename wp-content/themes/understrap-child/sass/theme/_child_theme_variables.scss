@@ -11,13 +11,13 @@
 $black: #000;
 $white: #fff;
 
-$primary: #868;
+$primary: #27282e;
 // navbar
 $c_navbar_bg: $white;
 $c_navbar_border: lighten($black, 90%);
 
 // carousel
-$c_carousel: $black;
+$c_carousel: $primary;
 $c_carousel_bg: rgba(250, 250, 250, 0.5);
 
 // Spacers
@@ -31,3 +31,6 @@ $s_xl: $s_l * 1.5;
 
 // font font-family
 $font-family-sans-serif:      'Lato', sans-serif !default;
+
+// Buttons
+$border-radius: 0;

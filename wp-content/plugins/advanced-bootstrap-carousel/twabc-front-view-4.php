@@ -1,14 +1,14 @@
 <?php
 wp_enqueue_style( 'twabc', plugins_url('asset/css/twabc-advanced-4.css',__FILE__ ), array(), TWABC_VERSION );
 // First content - the carousel indicators
-			if( count( $images ) > 1 ){ 
-			
+			if( count( $images ) > 1 ){
+
 			if($atts['showindicator'] != 'false') { ?>
-            
+
 				<ol class="carousel-indicators">
-				<?php 
+				<?php
 				$ind = 0;
-				foreach ($images as $key => $image) { 
+				foreach ($images as $key => $image) {
 				$ind++;
 				?>
 					<li data-target="#twabc_<?php echo $id; ?>" data-slide-to="<?php echo $key; ?>" <?php echo $key == 0 ? 'class="active"' : ''; ?>><?php if($atts['showindicator'] === 'numbered') {echo $ind;} ?></li>
@@ -30,10 +30,10 @@ wp_enqueue_style( 'twabc', plugins_url('asset/css/twabc-advanced-4.css',__FILE__
 					// Caption
 						echo '<img src="'.$image['img_src'].'" alt="'.$image['title'].'" />';
 						if(strlen($image['content']) > 0){
-							echo '<div class="carousel-caption animated fadeInDown">';
+							echo '<div class="carousel-caption">';
 							echo $image['content'];
 							echo '</div>';
-						}	
+						}
 					?>
 				</div>
 			<?php } ?>

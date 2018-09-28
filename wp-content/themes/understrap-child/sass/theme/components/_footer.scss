@@ -1,0 +1,43 @@
+/*
+** Footer widget (call to action)
+*/
+.footer-widget {
+    text-align: center;
+    padding: $s_sm 0;
+
+    h2 {
+        margin-bottom: $s_l;
+    }
+
+    @include fadeInUp(
+        $duration: 1s,
+        $delay: 0.76s,
+        $function: ease,
+        $fill: both,
+        $visibility: 1
+    );
+}
+
+/*
+// Footer block
+*/
+footer {
+    color: $white;
+    background-color: $black;
+
+    a {
+        color: $white;
+
+        &:hover {
+            color: darken($white, 10%);
+        }
+    }
+}
+
+.footer-menu {
+    text-align: right;
+    li {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+}

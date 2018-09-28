@@ -24,28 +24,31 @@
 }
 
 /*
-** Footer widget (call to action)
+// Entry titles
 */
-#footer-full-content {
-    text-align: center;
-    padding: $s_sm 0;
-
-    h2 {
-        margin-bottom: $s_l;
-    }
+.entry-title {
+    @include fadeInDown(
+        $duration: 1s,
+        $delay: 0.05s,
+        $function: ease,
+        $fill: both,
+        $visibility: 1
+    );
 }
 
-.footer-menu {
-    li {
-        display: inline-block;
-        margin-left: 1rem;
-    }
+.entry-content {
+    @include fadeInUp(
+        $duration: 1s,
+        $delay: 0.49s,
+        $function: ease,
+        $fill: both,
+        $visibility: 1
+    );
 }
 
-#wrapper-footer {
-    background-color: $black;
-
-    .site-info {
-        color: $white;
-    }
+/*
+// Contact Us - Google Map
+*/
+.huge_it_google_map {
+    margin-bottom: $s_sm;
 }
