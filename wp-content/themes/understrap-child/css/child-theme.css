@@ -11064,6 +11064,25 @@ a.skip-link {
     display: none; }
 
 /*
+// Sticky footer (jon)
+*/
+body {
+  margin-bottom: 306px;
+  /* Margin bottom by footer height */ }
+
+.site,
+#page-wrapper {
+  background-color: #fff; }
+
+.jon {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  height: 306px;
+  /* Set the fixed height of the footer here */ }
+
+/*
 ** Footer widget (call to action)
 */
 .footer-widget {
