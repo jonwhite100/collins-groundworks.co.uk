@@ -1,13 +1,42 @@
-.entry-title {
-    // background-color: red;
-    text-align: center;
-    font-size: $h3-font-size;
-    margin-bottom: $s_xl;
+/*
+** logo
+*/
+.navbar-brand.custom-logo-link {
+    .img-fluid {
+    	width: auto;
+    	height: 100px;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .shrink & {
+        .img-fluid {
+            height: 60px;
+            transition: all 0.25s ease-in-out;
+        }
+    }
+}
+
+#page-wrapper {
+	margin-bottom: 3.375rem;
+}
+
+.entry-header {
+    margin-top: 3.375rem;
+}
+
+#single-wrapper {
+    margin-top: $s_xl * 1.5;
 }
 
 /*
 ** Home Page specific
 */
+.home {
+    .entry-header {
+        margin-top: 0;
+    }
+}
+
 .home-intro {
     text-align: center;
     margin-bottom: $s_xl;
@@ -34,6 +63,9 @@
         $fill: both,
         $visibility: 1
     );
+    text-align: center;
+    font-size: $h3-font-size;
+    margin-bottom: $s_xl;
 }
 
 .entry-content {
@@ -45,6 +77,27 @@
         $visibility: 1
     );
 }
+
+.entry-content-img {
+    @include fadeInUp(
+        $duration: 1s,
+        $delay: 1.49s,
+        $function: ease,
+        $fill: both,
+        $visibility: 1
+    );
+}
+
+/*
+** Grid layout for posts
+*/
+.skin.flat {
+    .layer-content {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
 
 /*
 // Contact Us - Google Map

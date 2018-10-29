@@ -24,17 +24,33 @@
     // Shrink the header
 	&.shrink {
 		top: 0!important;
-		height:50px!important;
+		height:70px!important;
 		padding: 0.5rem 1rem!important;
 		background-color: rgba(250, 250, 250, 1)!important;
-		transition: all 0.25s ease-in-out;
+		transition: all 0.33s ease-in-out;
 
 		.mob-standard-logo {
-		  height: 25px !important;
-		  transition: all 0.25s ease-in-out;
+		  height: 70px !important;
+		  transition: all 0.33s ease-in-out;
 		}
 	}
 }
+
+.navbar-expand-md {
+    .navbar-nav {
+        .nav-link {
+            padding-right: $s_sm;
+            padding-left: $s_sm;
+
+            @include media-breakpoint-up(md) {
+
+            }
+        }
+    }
+}
+
+
+
 
 // Leave space at the top of the page for the fixed navbar
 #page-wrapper {

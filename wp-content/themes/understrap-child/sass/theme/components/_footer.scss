@@ -10,6 +10,10 @@ body {
     background-color: $white;
 }
 
+#wrapper-footer-full {
+    background-color: $primary;
+}
+
 .jon {
     position: fixed;
     z-index: -1;
@@ -26,7 +30,8 @@ body {
     padding: $s_sm 0;
 
     h2 {
-        margin-bottom: $s_l;
+        margin-bottom: $s_lg;
+        color: $white;
     }
 
     @include fadeInUp(
@@ -36,6 +41,11 @@ body {
         $fill: both,
         $visibility: 1
     );
+
+    .btn-default {
+        color: $primary;
+        border-color: $white;
+    }
 }
 
 /*
