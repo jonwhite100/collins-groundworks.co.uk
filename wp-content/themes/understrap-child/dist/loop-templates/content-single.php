@@ -20,20 +20,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 		-->
 	</header><!-- .entry-header -->
 
-	<div class="row">
-		<div class="col-md-7 entry-content">
-			<?php the_content(); ?>
-			<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-				'after'  => '</div>',
-			) );
-			?>
-		</div>
-		<div class="entry-content-img col-md-5">
-			<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-		</div>
+	<div class="entry-content-img">
+		<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
 	</div>
+	<div class="entry-content">
+		<?php the_content(); ?>
+		<?php
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'after'  => '</div>',
+		) );
+		?>
+	</div>
+
 
 
 
