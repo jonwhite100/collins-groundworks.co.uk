@@ -95,6 +95,10 @@
     .layer-content {
         padding-right: 0;
         padding-left: 0;
+        background-color: lighten($primary, 75%);
+        // .element {
+        //     padding: $s_xs 0 0 0!important;
+        // }
     }
 }
 

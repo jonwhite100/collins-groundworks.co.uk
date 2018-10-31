@@ -11108,7 +11108,8 @@ body {
     color: #fff; }
   .footer-widget .btn-default {
     color: #002e6e;
-    border-color: #fff; }
+    border-color: #fff;
+    font-size: 1.15rem; }
 
 /*
 // Footer block
@@ -11250,7 +11251,8 @@ footer {
 */
 .skin.flat .layer-content {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  background-color: #eef5ff; }
 
 /*
 // Contact Us - Google Map
