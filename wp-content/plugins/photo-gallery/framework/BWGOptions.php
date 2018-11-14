@@ -18,6 +18,7 @@ class WD_BWG_Options {
   public $save_ip = 1;
   public $image_right_click = 0;
   public $use_inline_stiles_and_scripts = 0;
+  public $enable_google_fonts = 1;
   public $enable_wp_editor = 0;
   public $enable_seo = 1;
   public $read_metadata = 1;
@@ -290,7 +291,7 @@ class WD_BWG_Options {
   public $watermark_width = 90;
   public $watermark_height = 90;
   public $watermark_url = '';
-  public $watermark_text = '10web.io';
+  public $watermark_text = '10Web.io';
   public $watermark_link = 'https://10web.io/';
   public $watermark_font_size = 20;
   public $watermark_font = 'segoe ui';
@@ -301,7 +302,7 @@ class WD_BWG_Options {
   public $built_in_watermark_position = 'middle-center';
   public $built_in_watermark_size = 15;
   public $built_in_watermark_url = '';
-  public $built_in_watermark_text = '10web.io';
+  public $built_in_watermark_text = '10Web.io';
   public $built_in_watermark_font_size = 20;
   public $built_in_watermark_font = 'arial';
   public $built_in_watermark_color = 'FFFFFF';

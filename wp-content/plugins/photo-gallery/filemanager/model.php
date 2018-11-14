@@ -109,7 +109,6 @@ class FilemanagerModel {
         $file['is_dir'] = FALSE;
         $file['name'] = $file_name;
         $filename = substr($file_name, 0, strrpos($file_name, '.'));
-        $file['alt'] = str_replace("_", " ", $filename);
         $file['filename'] = str_replace("_", " ", $filename);
         $file_extension = explode('.', $file_name);
         $file['type'] = strtolower(end($file_extension));
@@ -121,7 +120,7 @@ class FilemanagerModel {
         // $file_size_mb = (int)($file_size_kb / 1024);
         // $file['size'] = $file_size_kb < 1024 ? (string)$file_size_kb . 'KB' : (string)$file_size_mb . 'MB';
         $file['size'] = $file_size_kb . ' KB';
-        $file['date_modified'] = date('d F Y, H:i', filemtime($parent_dir . '/' . $file_name));
+        $file['date_modified'] = date('d F Y, H:i' );
         $image_info = getimagesize(htmlspecialchars_decode($parent_dir . '/' . $file_name, ENT_COMPAT | ENT_QUOTES));
         $file['resolution'] = $this->is_img($file['type']) ? $image_info[0]  . ' x ' . $image_info[1] . ' px' : '';
         $exif = WDWLibrary::read_image_metadata( $parent_dir . '/.original/' . $file_name );
@@ -132,6 +131,7 @@ class FilemanagerModel {
         $file['iso'] = $exif['iso'];
         $file['orientation'] = $exif['orientation'];
         $file['copyright'] = $exif['copyright'];
+        $file['alt'] = BWG()->options->read_metadata && $exif['title'] ? $exif['title'] : str_replace("_", " ", $filename);
         $file['tags'] = $exif['tags'];
         $files[] = $file;
       }

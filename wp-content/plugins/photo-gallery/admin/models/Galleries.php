@@ -1001,7 +1001,6 @@ class GalleriesModel_bwg {
       'redirect_url' => $redirecturl
     ), $where);
     $updated = $wpdb->query('UPDATE `' . $wpdb->prefix . 'bwg_image` SET `alt`="' . $title . '", `description`="' . $desc . '", `redirect_url`="' . $redirecturl . '"' . $where);
-
     $message = 2;
     if ( $updated !== FALSE ) {
       $message = 25;

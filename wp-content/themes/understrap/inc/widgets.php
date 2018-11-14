@@ -34,7 +34,7 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 				// If two widgets are published
 				$widget_classes .= ' col-md-2';
 			elseif ( $widget_count >= 3 ) :
-				// Three widgets per row if there's three or more widgets
+				// Three widgets per row if there's three or more widgets 
 				$widget_classes .= ' col-md-4';
 			elseif ( 2 == $widget_count ) :
 				// If two widgets are published
@@ -42,7 +42,7 @@ if ( ! function_exists( 'understrap_slbd_count_widgets' ) ) {
 			elseif ( 1 == $widget_count ) :
 				// If just on widget is active
 				$widget_classes .= ' col-md-12';
-			endif;
+			endif; 
 			return $widget_classes;
 		endif;
 	}
@@ -99,9 +99,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Top Full', 'understrap' ),
 			'id'            => 'statichero',
 			'description'   => __( 'Full top widget with dynamic grid', 'understrap' ),
-		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. understrap_slbd_count_widgets( 'statichero' ) .'">',
-		    'after_widget'   => '</div><!-- .static-hero-widget -->',
-		    'before_title'   => '<h3 class="widget-title">',
+		    'before_widget'  => '<div id="%1$s" class="static-hero-widget %2$s '. understrap_slbd_count_widgets( 'statichero' ) .'">', 
+		    'after_widget'   => '</div><!-- .static-hero-widget -->', 
+		    'before_title'   => '<h3 class="widget-title">', 
 		    'after_title'    => '</h3>',
 		) );
 
@@ -109,10 +109,10 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'name'          => __( 'Footer Full', 'understrap' ),
 			'id'            => 'footerfull',
 			'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
-		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. understrap_slbd_count_widgets( 'footerfull' ) .'">',
-		    'after_widget'   => '</div><!-- .footer-widget -->',
-		    'before_title'   => '<h3 class="widget-title">',
-		    'after_title'    => '</h3>',
+		    'before_widget'  => '<div id="%1$s" class="footer-widget %2$s '. understrap_slbd_count_widgets( 'footerfull' ) .'">', 
+		    'after_widget'   => '</div><!-- .footer-widget -->', 
+		    'before_title'   => '<h3 class="widget-title">', 
+		    'after_title'    => '</h3>', 
 		) );
 
 	}

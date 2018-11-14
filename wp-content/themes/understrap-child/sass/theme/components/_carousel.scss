@@ -64,6 +64,16 @@
         @include media-breakpoint-up(xs) {
             // background-color: red;
             height: 30rem;
+
+            .carousel-caption {
+                top: 15%;
+                left: 0;
+                width: 100%;
+
+                h1 {
+                    font-size: $h3-font-size * 1.2;
+                }
+            }
         }
 
         @include media-breakpoint-up(sm) {
@@ -78,6 +88,12 @@
         @include media-breakpoint-up(lg) {
             // background-color: green;
             height: 40rem;
+
+            .carousel-caption {
+                top: 30%;
+                left: 20%;
+                width: 60%;
+            }
         }
 
         @include media-breakpoint-up(xl) {
@@ -93,11 +109,8 @@
 }
 
 .carousel-caption {
-    top: 30%;
     right: inherit;
     bottom: inherit;
-    left: 20%;
-    width: 60%;
     padding-right: 2rem;
     padding-left: 2rem;
     font-size: $h1-font-size * 1.5;

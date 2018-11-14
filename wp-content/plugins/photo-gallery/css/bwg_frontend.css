@@ -50,9 +50,10 @@ div[id^="bwg_container"] .SumoSelect.open > .CaptionCont {
 
 #spider_popup_wrap a {
   border: none;
+  box-shadow: none;
 }
 
-div[id^="bwg_container"] a {
+div[id^="bwg_container"].bwg_container a {
   border: none;
   box-shadow: none !important;
   outline: none;
@@ -611,6 +612,10 @@ div[id^="bwg_container"] .bwg-border-box * {
 
 #bwg_download {
   display: inline-block;
+}
+
+#bwg_download.hidden {
+  display: none;
 }
 
 .bwg_thumbnail.bwg_container .search_line {

@@ -77,10 +77,9 @@ class WidgetView_bwg {
 			$params['compuct_album_enable_page'] = 0;
 		}
 		$controller = new $controller_class($view);
-    global $bwg;
+    $bwg = WDWLibrary::unique_number();
 		$pairs = WDWLibrary::get_shortcode_option_params( $params );
 		$controller->execute($pairs, 1, $bwg);
-    $bwg++;
 		// After widget.
 		echo $after_widget;
 	}

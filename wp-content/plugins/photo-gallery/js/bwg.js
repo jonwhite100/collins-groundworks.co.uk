@@ -409,8 +409,8 @@ function bwg_sort_images(sorting) {
   else {
     msg.addClass('wd-hide');
   }
-  spider_set_input_value('task', '');
-  spider_ajax_save('galleries_form');
+  spider_set_input_value('task', 'save');
+  spider_ajax_save('bwg_gallery');
 }
 
 /* Set value by id. */
@@ -436,7 +436,7 @@ function spider_form_submit(event, form_id) {
 /* Check if required field is empty. */
 function spider_check_required(id, name) {
   if (jQuery('#' + id).val() == '') {
-    alert(name + '* ' + bwg_objectL10B.bwg_field_required);
+    alert(name + ' ' + bwg_objectL10B.bwg_field_required);
     jQuery('#' + id).attr('style', 'border-color: #FF0000;');
     jQuery('#' + id).focus();
     jQuery('html, body').animate({
@@ -760,14 +760,14 @@ function bwg_add_tag(image_id, tagIds, titles) {
       if (jQuery("#check_" + ids_array[i]).attr('checked') == 'checked' || flag) {
         image_id = ids_array[i];
         var tag_ids = document.getElementById('tags_' + image_id).value;
-        var tags_array = tag_ids.split(',');
+        tags_array = tag_ids.split(',');
         var counter = 0;
         for (i = 0; i < tagIds.length; i++) {
           if (tags_array.indexOf(tagIds[i]) == -1) { /* To prevent add same tag multiple times. */
             tag_ids = tag_ids + tagIds[i] + ',';
             var html = jQuery("#" + image_id + "_tag_temptagid").clone().html();
             /* Remove white spaces from keywords to set as id and remove prefix.*/
-            var id = tagIds[i].replace(/\s+/g, '_').replace('bwg_', '');
+            var id = tagIds[i].replace(/\s+/g, '_').replace('bwg_', '').replace(/&amp;/g, "").replace(/&/g, "");
             html = html.replace(/temptagid/g, id)
                        .replace(/temptagname/g, titles[i]);
             jQuery("#tags_div_" + image_id).append("<div class='tag_div' id='" + image_id + "_tag_" + id + "'>");

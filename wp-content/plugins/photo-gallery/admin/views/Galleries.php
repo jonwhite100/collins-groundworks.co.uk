@@ -320,9 +320,12 @@ class GalleriesView_bwg extends AdminView_bwg {
                         <option value="instagram" <?php echo(($params['gallery_type'] == 'instagram') ? 'selected="selected"' : ''); ?>>
                           <?php _e('Instagram only', BWG()->prefix); ?>
                         </option>
+                        <?php
+                        if ( has_action('init_display_facebook_gallery_options_bwg') && $current_id != 0 ) { ?>
                         <option value="facebook" <?php echo(($params['gallery_type'] == 'facebook') ? 'selected="selected"' : ''); ?>>
                           <?php _e('Facebook', BWG()->prefix); ?>
                         </option>
+                        <?php } ?>
                       </select>
                       <input type="text" id="gallery_type_old" name="gallery_type_old" value="<?php echo $row->gallery_type; ?>" style='display:none;' />
 					  <?php if ( empty($params['rows'][0]) ) { ?>
@@ -509,13 +512,6 @@ class GalleriesView_bwg extends AdminView_bwg {
     </div>
     <!-- Edit from bulk block -->
     <div id="add_desc" class="opacity_image_desc bwg_image_desc">
-      <div class="edit_cont_buttons">
-        <input class="button button-primary button-large" type="button" onclick="spider_set_input_value('ajax_task', 'image_edit');
-                                                                                 spider_ajax_save('bwg_gallery');
-                                                                                 jQuery('.opacity_image_desc').hide();
-                                                                                 return false;" value="<?php _e('Update', BWG()->prefix); ?>" />
-        <input class="button button-secondary button-large" type="button" onclick="jQuery('.opacity_image_desc').hide(); return false;" value="<?php echo __('Cancel', BWG()->prefix); ?>" />
-      </div>
       <div>
         <span class="bwg_popup_label">
           <?php _e('Alt/Title: ', BWG()->prefix); ?>
@@ -533,6 +529,14 @@ class GalleriesView_bwg extends AdminView_bwg {
           <?php _e('Description: ', BWG()->prefix); ?>
         </span>
         <textarea class="bwg_popup_input" type="text" id="desc" name="desc"></textarea>
+      </div>
+      <br>
+      <div class="edit_cont_buttons">
+        <input class="button button-primary button-large" type="button" onclick="spider_set_input_value('ajax_task', 'image_edit');
+                                                                                 spider_ajax_save('bwg_gallery');
+                                                                                 jQuery('.opacity_image_desc').hide();
+                                                                                 return false;" value="<?php _e('Update', BWG()->prefix); ?>" />
+        <input class="button button-secondary button-large" type="button" onclick="jQuery('.opacity_image_desc').hide(); return false;" value="<?php echo __('Cancel', BWG()->prefix); ?>" />
       </div>
     </div>
     <div class="ajax-msg wd-hide">
@@ -667,7 +671,7 @@ class GalleriesView_bwg extends AdminView_bwg {
                   <?php echo $row->filename; ?>
                   <i class="wd-info dashicons dashicons-info" data-id="wd-info-<?php echo $row->id; ?>"></i>
                   <div id="wd-info-<?php echo $row->id; ?>" class="wd-hide">
-                    <p><?php echo __("Date modified", BWG()->prefix) . ': ' . ($temp ? $row->date : date("d F Y, H:i", strtotime($row->date))); ?></p>
+                    <p><?php echo __("Date", BWG()->prefix) . ': ' . ($temp ? $row->date : date("d F Y, H:i", strtotime($row->date))); ?></p>
                     <p><?php echo __("Resolution", BWG()->prefix) . ': ' . $row->resolution; ?></p>
                     <p><?php echo __("Size", BWG()->prefix) . ': ' . $row->size; ?></p>
                     <p><?php echo __("Type", BWG()->prefix) . ': ' . $row->filetype; ?></p>

@@ -484,9 +484,10 @@ function onFileMOut(event, obj) {
 }
 
 function onFileClick(event, obj) {
+  var isMobile = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
   jQuery(".explorer_item").removeClass("explorer_item_select");
   var objName = jQuery(obj).attr("name");
-  if (event.ctrlKey == true || event.metaKey == true) {
+  if (event.ctrlKey == true || event.metaKey == true || isMobile) {
     if (all_files_selected === true) {
       if (filesSelected.indexOf(objName) == -1) {
         var index = no_selected_files.indexOf(objName);
@@ -505,6 +506,7 @@ function onFileClick(event, obj) {
     else {
       filesSelected.splice(filesSelected.indexOf(objName), 1);
       jQuery(obj).removeClass("explorer_item_select");
+      jQuery(obj).removeClass("explorer_item_hover");
     }
   }
   else if (event.shiftKey == true) {

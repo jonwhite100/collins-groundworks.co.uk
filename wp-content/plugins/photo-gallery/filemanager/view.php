@@ -96,7 +96,7 @@ class FilemanagerView {
         break;
     }
     $i = 0;
-	  ?>
+	?>
     <form id="adminForm" name="adminForm" action="" method="post" class="wp-core-ui">
       <?php wp_nonce_field( '', 'bwg_nonce' ); ?>
       <div id="wrapper">
